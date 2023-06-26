@@ -1,0 +1,108 @@
+:root{
+    --black:#313348;
+    --white:#EDF4FA;
+    --red:#A52C3D;
+    --dark-red:#573045;
+}
+.game-board{
+    background-color: var(--black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: var(--white);
+    flex-direction: column;
+}
+#chess-board {
+    display: inline-block;
+    flex-wrap: wrap;
+    padding: 5px;
+    border-radius: 8px;
+    background-color: var(--black);
+    border: 2px solid var(--white);
+    box-shadow: 0px 0px 100px 0px rgba(0,0,0,0.1);
+}
+
+#chess-board .tile{
+    width: 5vw;
+    height: 5vw;
+    text-align: center;
+    border-radius: 4px;
+    font-size: 2em;
+}
+table { /* tables still need 'cellspacing="0"' in the markup */
+    border-collapse: separate;
+    border-spacing: 5px;
+}
+#chess-board .tile {
+    background-color: var(--red);
+}
+
+
+#chess-board .new-row {
+    width: 100%;
+    clear: both;
+}
+
+
+#chess-board .empty {
+    background-color: red;
+}
+
+#chess-board .player {
+    background-color: var(--red);
+    cursor: pointer;
+}
+
+#chess-board .clicked {
+    background-color: transparent;
+    border: 2px solid var(--white);
+    cursor: crosshair;
+    border-radius: 25%;
+    transition: .3s ease-out ;
+}
+#chess-board .clicked:hover{
+    background-color: var(--white);
+    color: var(--red);
+    border-radius: 50%;
+}
+
+
+.player-info > :nth-child(2){
+    width: 80%;
+}
+.player-info label{
+    font-size: 2em;
+}
+.avatar-picture{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: var(--black);
+    border: 3px solid var(--white);
+    position: relative;
+}
+.avatar-picture::after{
+    text-align: center;
+    content: attr(data-value);
+    position: absolute;
+    padding: 10px;
+    min-width: 50px;
+    border-radius: 50%;
+    background-color: var(--black);
+    border: 4px solid var(--white);
+    left: 0;
+    bottom: -20px
+}
+.player-input{
+    width: 100%;
+    height: 2.5em;
+    padding: 0 5px ;
+    background: none;
+    border: none;
+    border-bottom: var(--white) 2px solid;
+    color: var(--white);
+    
+    font-weight: bold;
+    letter-spacing: 4px;
+}
