@@ -13,7 +13,7 @@
 
 <body onload="document.getElementById('chess-board').innerHTML = displayChessBoard();">
     <div class="game-board">
-        <div class="container align-self-start mb-5">
+        <div class="container align-self-start mb-lg-5">
             <div class="row">
                 <div class="col-5 d-flex flex-row player-info">
                     <div data-value="0" class="avatar-picture player-1">
@@ -44,13 +44,13 @@
             </div>
         </div>
         <div id="chess-board"></div>
-        <div class="container mt-5">
+        <div class="container mt-lg-5">
             <div class="row">
                 <div class="col">
-                    <button class="btn btn-lg btn-outline-light px-5" onclick="check('.player-1','#input-p1')">Check</button>
+                    <button class="btn btn-lg btn-outline-light px-lg-5" onclick="check('.player-1','#input-p1')">Check</button>
                 </div>
                 <div class="col">
-                    <button class="btn btn-lg btn-outline-light px-5 float-end" onclick="check('.player-2','#input-p2')">Check</button>
+                    <button class="btn btn-lg btn-outline-light px-lg-5 float-end" onclick="check('.player-2','#input-p2')">Check</button>
                 </div>
             </div>
         </div>
@@ -93,7 +93,7 @@
         </div>
     </div>
     <script>
-        let turn = 8;
+        let turn = 40;
         let array = new Array(5);
         for (let i = 0; i < array.length; i++) {
             array[i] = new Array(9);
