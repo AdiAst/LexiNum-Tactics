@@ -1,5 +1,5 @@
 function endGame() {
-  const card2 = document.querySelector(".card2");
+  const secondCard = document.querySelector(".second-card");
   const card = document.querySelector(".card");
   const player1 = document.querySelector(".player-1");
   const player2 = document.querySelector(".player-2");
@@ -7,7 +7,7 @@ function endGame() {
   const subtitle = document.querySelector(".subtitle");
   const congratText = document.querySelector(".congrat-text");
 
-  card2.style.display = "block";
+  secondCard.style.display = "block";
   card.style.display = "none";
 
   const player1Value = parseInt(player1.getAttribute('data-value'));
